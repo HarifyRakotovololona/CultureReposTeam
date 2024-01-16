@@ -51,8 +51,7 @@ public class Plot implements Serializable {
         this.groundType = groundType;
     }
 
-    public Plot()
-    {
+    public Plot(){
 
     }
 
