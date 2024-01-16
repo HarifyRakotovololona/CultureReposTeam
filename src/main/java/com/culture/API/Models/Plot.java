@@ -16,8 +16,9 @@ public class Plot implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPlot;
 
-    @Basic
-    private int idField;
+    @ManyToOne
+    @JoinColumn(name="idField")
+    private Field field;
 
     @Basic
     private double area;
@@ -34,14 +35,6 @@ public class Plot implements Serializable {
         this.idPlot = idPlot;
     }
 
-    public int getIdField() {
-        return idField;
-    }
-
-    public void setIdField(int idField) {
-        this.idField = idField;
-    }
-
     public double getArea() {
         return area;
     }
@@ -55,13 +48,6 @@ public class Plot implements Serializable {
     }
 
     public void setGroundType(GroundType groundType) {
-        this.groundType = groundType;
-    }
-
-    public Plot(int idPlot, int idField, double area, GroundType groundType) {
-        this.idPlot = idPlot;
-        this.idField = idField;
-        this.area = area;
         this.groundType = groundType;
     }
 
