@@ -1,4 +1,4 @@
-package com.culture.API.Controller;
+package com.culture.API.Controllers;
 
 
 import org.springframework.http.HttpStatus;
