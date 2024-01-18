@@ -1,6 +1,9 @@
 package com.culture.API.Models;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.culture.API.Repository.*;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
@@ -41,5 +44,15 @@ public class GroundType implements Serializable{
     public GroundType()
     {
 
+    }
+
+    public static GroundType saveGroundType(GroundType groundType, GroundTypeRepository groundTypeRepository){
+        GroundType groundType2 = groundTypeRepository.save(groundType);
+        return groundType2;
+    }
+
+    public static List<GroundType> listGroundType(GroundTypeRepository groundTypeRepository){
+        List<GroundType> groundType = groundTypeRepository.findAll();
+        return groundType;
     }
 }

@@ -1,6 +1,7 @@
 package com.culture.API.Models;
 
 import java.io.Serializable;
+import com.culture.API.Repository.PlotRepository;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
@@ -53,6 +54,11 @@ public class Plot implements Serializable {
 
     public Plot(){
 
+    }
+
+    public static Plot savePlot(Plot plot, PlotRepository plotRepository){
+        Plot plot2 = plotRepository.save(plot);
+        return plot2;
     }
 
 }

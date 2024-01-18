@@ -94,6 +94,4 @@ public class Owner implements Serializable{
     public void setFields(List<Field> fields) {
         this.fields = fields;
     }
-
-
 }
