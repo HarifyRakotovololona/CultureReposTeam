@@ -1,7 +1,6 @@
 package com.culture.API.Controllers;
 
 import com.culture.API.Models.Field;
-import com.culture.API.Models.Owner;
 import com.culture.API.Repository.FieldRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

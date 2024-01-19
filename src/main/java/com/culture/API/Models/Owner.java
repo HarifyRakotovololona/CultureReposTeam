@@ -15,7 +15,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Transient;
-import jakarta.annotation.*;
 @Entity
 public class Owner implements Serializable{
     @Id
